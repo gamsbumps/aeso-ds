@@ -5,4 +5,8 @@ public class Rectangle {
 
     Rectangle(){
     }
+
+    public Rectangle(int side) {
+        this.side = side;
+    }
 }
