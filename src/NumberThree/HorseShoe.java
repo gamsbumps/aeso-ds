@@ -27,5 +27,9 @@ public class HorseShoe {
         return 4 * this.horses;
     }
 
-
+    @Override
+    public String toString() {
+        return horseShoe() + "will be needed to be bought for " + horses
+                + " horses.";
+    }
 }
