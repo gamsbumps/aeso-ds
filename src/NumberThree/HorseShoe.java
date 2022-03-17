@@ -1,13 +1,13 @@
 package NumberThree;
 
 public class HorseShoe {
-    int horseshoe = 0;
+    int horses = 0;
 
     public int getHorseshoe() {
-        return horseshoe;
+        return horses;
     }
 
     public void setHorseshoe(int horseshoe) {
-        this.horseshoe = horseshoe;
+        this.horses = horseshoe;
     }
 }
