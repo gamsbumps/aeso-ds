@@ -38,5 +38,8 @@ public class Rectangle {
         this.setHeight(height);
     }
 
-    
+    int area(){
+        return this.side * this.height;
+    }
+
 }
