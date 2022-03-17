@@ -33,7 +33,7 @@ public class Rectangle {
     Rectangle(){
     }
 
-    public Rectangle(int side) {
+    public Rectangle(int side, int height) {
         this.setSide(side);
         this.setHeight(height);
     }
