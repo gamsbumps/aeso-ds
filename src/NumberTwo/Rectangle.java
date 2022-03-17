@@ -8,7 +8,10 @@ public class Rectangle {
     }
 
     public void setSide(int side) {
-        this.side = side;
+        if (side > 0){
+            this.side = side;
+        }
+
     }
 
     Rectangle(){
@@ -17,4 +20,5 @@ public class Rectangle {
     public Rectangle(int side) {
         this.setSide(side);
     }
+
 }
