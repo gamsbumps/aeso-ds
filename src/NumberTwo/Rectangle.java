@@ -15,6 +15,6 @@ public class Rectangle {
     }
 
     public Rectangle(int side) {
-        this.side = side;
+        this.setSide(side);
     }
 }
