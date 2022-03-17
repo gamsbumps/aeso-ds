@@ -26,8 +26,9 @@ public class Rectangle {
         if (height > 0){
             this.height = height;
         }
-        System.out.println("Height cannot be lower than 1!");
-
+        else {
+            System.out.println("Height cannot be lower than 1!");
+        }
     }
 
     Rectangle(){
