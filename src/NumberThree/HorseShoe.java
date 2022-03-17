@@ -1,7 +1,7 @@
 package NumberThree;
 
 public class HorseShoe {
-    int horses = 0;
+    private int horses = 0;
 
     public int getHorseshoe() {
         return horses;
@@ -22,4 +22,10 @@ public class HorseShoe {
     public HorseShoe(int horses) {
         this.setHorses(horses);
     }
+
+    public int horseShoe(){
+        return 4 * this.horses;
+    }
+
+
 }
