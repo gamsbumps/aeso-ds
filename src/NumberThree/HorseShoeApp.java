@@ -8,6 +8,6 @@ public class HorseShoeApp {
 
         int horse = scan.nextInt();
         HorseShoe hor = new HorseShoe(horse);
-
+        System.out.println(hor.horseShoe());
     }
 }
