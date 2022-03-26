@@ -19,7 +19,7 @@ public class Rhombus {
         this.diagonal2 = diagonal2;
     }
 
-    public Rhombus(int diagonal1, int diagonal2) {
+    public Rhombus(float diagonal1, float diagonal2) {
         setDiagonal1(diagonal1);
         setDiagonal2(diagonal2);
     }
