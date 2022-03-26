@@ -47,4 +47,21 @@ public class ConsoleGUI {
     public void setTriangles(Triangles triangles) {
         this.triangles = triangles;
     }
+
+    public ConsoleGUI(){
+        setScanner(new Scanner(System.in));
+    }
+    public void gui(){
+        System.out.println("How long is A: ");
+        setTxtA(getScanner().nextInt());
+
+        System.out.println("How long is B: ");
+        setTxtB(getScanner().nextInt());
+
+        System.out.println("How long is C: ");
+        setTxtC(getScanner().nextInt());
+
+        setTriangles(new Triangles(getTxtA(), getTxtB(), getTxtC()));
+        getTriangles().calculateTriangles();
+    }
 }
