@@ -15,6 +15,9 @@ public class ConsoleGUI {
     private Scanner scanner;
     private Person person;
 
+    public ConsoleGUI(){
+        setScanner(new Scanner(System.in));
+    }
     public String getTxtName() {
         return txtName;
     }
@@ -45,5 +48,15 @@ public class ConsoleGUI {
 
     public void setPerson(Person person) {
         this.person = person;
+    }
+    public void gui(){
+        System.out.println("What is your name? ");
+        setTxtName(getScanner().next());
+
+        System.out.println("What is your age? ");
+        setTxtAge(getScanner().nextInt());
+
+        setPerson(new Person(getTxtName(), getTxtAge()));
+        System.out.println(getTxtName() + ", you have lived " + getPerson().countingDaysLived() + " days.");
     }
 }
