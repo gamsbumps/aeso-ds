@@ -61,7 +61,7 @@ public class ConsoleGUI {
         System.out.println("How long is b? ");
         setTxtB(getScanner().nextFloat());
 
-        setTriangle(new Triangle(getTxtA(), getTxtB(), getTriangle().calculateHypotenuse()));
-        System.out.println("H = " + getTxtH() + "cm");
+        setTriangle(new Triangle(getTxtA(), getTxtB(), getTxtH()));
+        System.out.println("H = " + getTriangle().calculateHypotenuse() + "cm");
     }
 }
