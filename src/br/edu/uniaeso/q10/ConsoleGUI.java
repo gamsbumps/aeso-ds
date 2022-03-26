@@ -9,6 +9,12 @@ public class ConsoleGUI {
     private Scanner scanner;
     private RockPaperScissors rockPaperScissors;
 
+    public static int randInt(int min, int max){
+        java.util.Random rand = new java.util.Random();
+        int randomNum = rand.nextInt((max -min) + 1) + min;
+        return randomNum;
+    }
+
     public String getTxtPlayer() {
         return txtPlayer;
     }
@@ -39,5 +45,14 @@ public class ConsoleGUI {
 
     public void setRockPaperScissors(RockPaperScissors rockPaperScissors) {
         this.rockPaperScissors = rockPaperScissors;
+    }
+    public ConsoleGUI(){
+        setScanner(new Scanner(System.in));
+    }
+    public void gui(){
+        System.out.println("ROCK, PAPER OR SCISSORS? ");
+        setTxtPlayer(getScanner().next().toUpperCase());
+
+        setTxtComputer(randInt(0, 2));
     }
 }
