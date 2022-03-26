@@ -28,5 +28,8 @@ public class Rhombus {
         setDiagonal1(0);
         setDiagonal2(0);
     }
+    public float calculateArea(){
+        return (getDiagonal1() * getDiagonal2())/2;
+    }
 
 }
