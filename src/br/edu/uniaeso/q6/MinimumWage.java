@@ -18,4 +18,7 @@ public class MinimumWage {
     public MinimumWage() {
         setSalary(0);
     }
+    public float calculateSalaries(){
+        return getSalary()/1212;
+    }
 }
