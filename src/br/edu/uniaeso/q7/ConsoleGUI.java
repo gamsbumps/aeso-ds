@@ -42,4 +42,14 @@ public class ConsoleGUI {
     public ConsoleGUI(){
         setScanner(new Scanner(System.in));
     }
+    public void gui(){
+        System.out.println("How long is the first diagonal? ");
+        setTxtDiagonal1(getScanner().nextFloat());
+
+        System.out.println("How long is the second diagonal? ");
+        setTxtDiagonal2(getScanner().nextFloat());
+
+        setRhombus(new Rhombus(getTxtDiagonal1(), getTxtDiagonal2()));
+        System.out.println("A = " + getRhombus().calculateArea() + "cm?");
+    }
 }
