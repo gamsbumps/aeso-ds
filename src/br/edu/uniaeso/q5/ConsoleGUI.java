@@ -51,4 +51,8 @@ public class ConsoleGUI {
     public void setTriangle(Triangle triangle) {
         this.triangle = triangle;
     }
+    public ConsoleGUI(){
+        setScanner(new Scanner(System.in));
+    }
+
 }
