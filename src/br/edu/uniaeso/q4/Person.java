@@ -32,4 +32,14 @@ public class Person {
             System.out.println("Age cannot be lower than 0");
         }
     }
+
+    public Person(String name, int age) {
+        setName(name);
+        setAge(age);
+    }
+
+    public Person() {
+        setName(" ");
+        setAge(0);
+    }
 }
