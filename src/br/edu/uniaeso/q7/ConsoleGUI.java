@@ -39,5 +39,7 @@ public class ConsoleGUI {
     public void setRhombus(Rhombus rhombus) {
         this.rhombus = rhombus;
     }
-
+    public ConsoleGUI(){
+        setScanner(new Scanner(System.in));
+    }
 }
