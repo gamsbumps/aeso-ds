@@ -54,5 +54,14 @@ public class ConsoleGUI {
     public ConsoleGUI(){
         setScanner(new Scanner(System.in));
     }
+    public void gui(){
+        System.out.println("How long is a? ");
+        setTxtA(getScanner().nextFloat());
 
+        System.out.println("How long is b? ");
+        setTxtB(getScanner().nextFloat());
+
+        setTriangle(new Triangle(getTxtA(), getTxtB(), getTriangle().calculateHypotenuse()));
+        System.out.println("H = " + getTxtH() + "cm");
+    }
 }
