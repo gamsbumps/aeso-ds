@@ -38,4 +38,19 @@ public class Triangles {
         setB(0);
         setC(0);
     }
+    public void calculateTriangles(){
+        if(a + b > c && a + c > b && b + c > a){
+            if(a == b || b == c || c == a){
+                if(a == b && a == c){
+                    System.out.println("Equilateral triangle");
+                }
+                else{
+                    System.out.println("Isoceles triangle");
+                }
+            }
+            if(a != b && b != c && c != a){
+                System.out.println("Scalene triangle");
+            }
+        }
+    }
 }
