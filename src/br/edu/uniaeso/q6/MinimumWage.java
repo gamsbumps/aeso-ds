@@ -10,4 +10,12 @@ public class MinimumWage {
     public void setSalary(float salary) {
         this.salary = salary;
     }
+
+    public MinimumWage(float salary) {
+        setSalary(salary);
+    }
+
+    public MinimumWage() {
+        setSalary(0);
+    }
 }
