@@ -54,5 +54,7 @@ public class ConsoleGUI {
         setTxtPlayer(getScanner().next().toUpperCase());
 
         setTxtComputer(randInt(0, 2));
+        setRockPaperScissors(new RockPaperScissors(getTxtPlayer(), getTxtComputer()));
+        getRockPaperScissors().playRPS();
     }
 }
