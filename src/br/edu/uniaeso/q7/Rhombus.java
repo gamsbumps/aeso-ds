@@ -18,4 +18,14 @@ public class Rhombus {
     public void setDiagonal2(int diagonal2) {
         this.diagonal2 = diagonal2;
     }
+
+    public Rhombus(int diagonal1, int diagonal2) {
+        setDiagonal1(diagonal1);
+        setDiagonal2(diagonal2);
+    }
+
+    public Rhombus() {
+        setDiagonal1(0);
+        setDiagonal2(0);
+    }
 }
