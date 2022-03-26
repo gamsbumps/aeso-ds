@@ -59,4 +59,20 @@ public class ConsoleGUI {
     public ConsoleGUI() {
         setScanner(new Scanner(System.in));
     }
+    public void gui(){
+        System.out.println("X1: ");
+        setTxtX1(getScanner().nextFloat());
+
+        System.out.println("X2: ");
+        setTxtX2(getScanner().nextFloat());
+
+        System.out.println("Y1: ");
+        setTxtY1(getScanner().nextFloat());
+
+        System.out.println("Y2: ");
+        setTxtY2(getScanner().nextFloat());
+
+        setDistancePoints(new DistancePoints(getTxtX1(), getTxtX2(), getTxtY1(), getTxtY2()));
+        System.out.println("D = " + getDistancePoints().calculateDistance() + "cm");
+    }
 }
