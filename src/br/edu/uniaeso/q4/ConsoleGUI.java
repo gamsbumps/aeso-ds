@@ -53,7 +53,7 @@ public class ConsoleGUI {
         System.out.println("What is your name? ");
         setTxtName(getScanner().next());
 
-        System.out.println("What is your age? ");
+        System.out.println("How old are you? ");
         setTxtAge(getScanner().nextInt());
 
         setPerson(new Person(getTxtName(), getTxtAge()));
