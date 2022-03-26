@@ -55,4 +55,8 @@ public class ConsoleGUI {
     public void setDistancePoints(DistancePoints distancePoints) {
         this.distancePoints = distancePoints;
     }
+
+    public ConsoleGUI() {
+        setScanner(new Scanner(System.in));
+    }
 }
