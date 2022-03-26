@@ -39,7 +39,7 @@ public class Triangle {
         this.h = h;
     }
 
-    public Triangle(int a, int b, int h) {
+    public Triangle(float a, float b, float h) {
         setA(a);
         setB(b);
         setH(h);
@@ -49,6 +49,7 @@ public class Triangle {
         setB(0);
         setH(0);
     }
-    
-
+    public float calculateHypotenuse(){
+       return h = (float) (sqrt (a*a + b*b));
+    }
 }
