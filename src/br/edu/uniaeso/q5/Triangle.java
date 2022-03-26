@@ -1,28 +1,54 @@
 package br.edu.uniaeso.q5;
 
-public class Triangle {
-    private int a, b, h;
+import static java.lang.Math.sqrt;
 
-    public int getA() {
+public class Triangle {
+    private float a, b, h;
+
+    public float getA() {
         return a;
     }
 
-    public void setA(int a) {
+    public void setA(float a) {
+        if(a > 0){
+            this.a = a;
+        }
+        else{
+            System.out.println("Must be higher than 0");
+        }
     }
 
-    public int getB() {
+    public float getB() {
         return b;
     }
 
-    public void setB(int b) {
-        this.b = b;
+    public void setB(float b) {
+        if(b > 0){
+            this.b = b;
+        }
+        else{
+            System.out.println("Must be higher than 0");
+        }
     }
 
-    public int getH() {
+    public float getH() {
         return h;
     }
 
-    public void setH(int h) {
+    public void setH(float h) {
         this.h = h;
     }
+
+    public Triangle(int a, int b, int h) {
+        setA(a);
+        setB(b);
+        setH(h);
+    }
+    public Triangle() {
+        setA(0);
+        setB(0);
+        setH(0);
+    }
+    
+
 }
