@@ -34,4 +34,11 @@ public class ConsoleGUI {
     public void setMinimumWage(MinimumWage minimumWage) {
         this.minimumWage = minimumWage;
     }
+    public void gui(){
+        System.out.println("What is your salary? ");
+        setTxtSalary(getScanner().nextFloat());
+
+        setMinimumWage(new MinimumWage(getTxtSalary()));
+        System.out.println("You have " + getMinimumWage().calculateSalaries() + " minimum wages");
+    }
 }
