@@ -23,6 +23,9 @@ public class ConsoleGUI {
     public void setScanner(Scanner scanner) {
         this.scanner = scanner;
     }
+    public ConsoleGUI(){
+        setScanner(new Scanner(System.in));
+    }
 
     public MinimumWage getMinimumWage() {
         return minimumWage;
