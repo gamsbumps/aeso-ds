@@ -34,4 +34,18 @@ public class DistancePoints {
     public void setY2(float y2) {
         this.y2 = y2;
     }
+
+    public DistancePoints(float x1, float x2, float y1, float y2) {
+        setX1(x1);
+        setX2(x2);
+        setY1(y1);
+        setY2(y2);
+    }
+
+    public DistancePoints() {
+        setX1(0);
+        setX2(0);
+        setY1(0);
+        setY2(0);
+    }
 }
