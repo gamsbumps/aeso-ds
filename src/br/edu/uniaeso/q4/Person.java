@@ -42,4 +42,8 @@ public class Person {
         setName(" ");
         setAge(0);
     }
+
+    public int countingDaysLived(){
+        return this.age * 365;
+    }
 }
