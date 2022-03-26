@@ -48,4 +48,7 @@ public class DistancePoints {
         setY1(0);
         setY2(0);
     }
+    public float calculateDistance(){
+       return (float) Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+    }
 }
