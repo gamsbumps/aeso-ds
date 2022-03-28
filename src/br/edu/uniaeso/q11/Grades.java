@@ -39,6 +39,31 @@ public class Grades {
         setGrade3(0);
     }
     public void calculateGrades(){
-
+        if(grade1 > 3 && grade2 > 3){
+            System.out.println("PASSED");
+        }else if ((grade1 + grade2)/2 >= 5){
+            System.out.println("PASSED");
+        }else{
+            calculateFinals();
+        }
+    }
+    public void calculateFinals(){
+        float finals;
+        if (grade1 > grade2){
+             finals = (grade1 + grade3)/2;
+            if (finals >= 5){
+                System.out.println("PASSED");
+            }
+            else{
+                System.out.println("FAILED");
+            }
+        }else if(grade2 > grade1){
+            finals = (grade2 + grade3)/2;
+            if(finals >= 5){
+                System.out.println("PASSED");
+            }else{
+                System.out.println("FAILED");
+            }
+        }
     }
 }
