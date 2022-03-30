@@ -42,6 +42,11 @@ public class Intervals {
     public void setOdds(int odds) {
         this.odds = odds;
     }
-
-
+    public Intervals(){}
+    public Intervals(int limitOne, int limitTwo, int sum, int odds) {
+        setLimitOne(limitOne);
+        setLimitTwo(limitTwo);
+        setSum(sum);
+        setOdds(odds);
+    }
 }
