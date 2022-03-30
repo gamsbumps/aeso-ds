@@ -38,32 +38,28 @@ public class Grades {
         setGrade2(0);
         setGrade3(0);
     }
-    public void calculateGrades(){
-        if(grade1 > 3 && grade2 > 3){
-            System.out.println("PASSED");
-        }else if ((grade1 + grade2)/2 >= 5){
-            System.out.println("PASSED");
-        }else{
-            calculateFinals();
+    public boolean calculateGrades(){
+        if(grade1 > 3 && grade2 > 3) return true;
+        if((grade1 + grade2)/2 >= 5){
+            return true;
         }
+        return false;
     }
-    public void calculateFinals(){
+
+    public boolean calculateFinals(){
         float finals;
         if (grade1 > grade2){
              finals = (grade1 + grade3)/2;
-            if (finals >= 5){
-                System.out.println("PASSED");
-            }
+            if (finals >= 5) return true;
             else{
-                System.out.println("FAILED");
+                return false;
             }
         }else if(grade2 > grade1){
             finals = (grade2 + grade3)/2;
             if(finals >= 5){
-                System.out.println("PASSED");
-            }else{
-                System.out.println("FAILED");
-            }
+                return true;
+            }else return false;
         }
+        return false;
     }
 }

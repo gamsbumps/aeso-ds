@@ -50,4 +50,31 @@ public class ConsoleGUI {
     public ConsoleGUI(){
         setScanner(new Scanner(System.in));
     }
+    public void gui(){
+        System.out.println("First grade: ");
+        setTxtGrade1(getScanner().nextFloat());
+
+        System.out.println("Second grade: ");
+        setTxtGrade2(getScanner().nextFloat());
+        setGrades(new Grades(getTxtGrade1(), getTxtGrade2(), getTxtGrade3()));
+
+
+        boolean result = getGrades().calculateGrades();
+        if (result){
+            System.out.println("PASSED!");
+        }else{
+            System.out.println("You're in the finals. Put your finals' grade: ");
+            setTxtGrade3(getScanner().nextFloat());
+            result = getGrades().calculateFinals();
+            if(result){
+                System.out.println("PASSED!");
+            }else{
+                System.out.println("FAILED!");
+            }
+        }
+
+
+
+
+    }
 }
