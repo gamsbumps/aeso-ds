@@ -61,9 +61,9 @@ public class Intervals {
         if (getLimitOne() < getLimitTwo()) {
             for (int i = getLimitOne() + 1; i < getLimitTwo() - 1; i++) {
                 if (i % 2 == 0) {
-                    System.out.println("EVEN NUMBER!");
+                    System.out.println(i + ", EVEN NUMBER!");
                 } else {
-                    System.out.println("ODD NUMBER!");
+                    System.out.println(i + ", ODD NUMBER!");
                 }
             }
         }
