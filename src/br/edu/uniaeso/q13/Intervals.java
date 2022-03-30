@@ -1,7 +1,7 @@
 package br.edu.uniaeso.q13;
 
 public class Intervals {
-    private int limitOne, limitTwo, sum, odds;
+    private int limitOne, limitTwo;
 
     public int getLimitOne() {
         return limitOne;
@@ -27,26 +27,45 @@ public class Intervals {
         }
     }
 
-    public int getSum() {
-        return sum;
-    }
-
-    public void setSum(int sum) {
-        this.sum = sum;
-    }
-
-    public int getOdds() {
-        return odds;
-    }
-
-    public void setOdds(int odds) {
-        this.odds = odds;
-    }
     public Intervals(){}
-    public Intervals(int limitOne, int limitTwo, int sum, int odds) {
+    public Intervals(int limitOne, int limitTwo) {
         setLimitOne(limitOne);
         setLimitTwo(limitTwo);
-        setSum(sum);
-        setOdds(odds);
+    }
+    public void calculateIntegers(){
+        if(getLimitOne() < getLimitTwo()){
+            int sum = 0;
+            for(int i = getLimitOne() + 1; i < getLimitTwo() - 1; i++){
+                sum += i;
+            }
+            System.out.println(sum);
+        }
+    }
+    public void countingIntegers(){
+        if(getLimitOne() < getLimitTwo()){
+            int counter = (getLimitOne() + 1) - (getLimitTwo() - 1);
+            System.out.println(counter);
+        }
+    }
+    public void countingOdds(){
+        if(getLimitOne() < getLimitTwo()) {
+            int sumOdds = 0;
+            for (int i = getLimitOne() + 1; i < getLimitTwo() - 1; i++) {
+                if (i % 2 == 1) {
+                    sumOdds += i;
+                }
+            }
+        }
+    }
+    public void oddOrEven() {
+        if (getLimitOne() < getLimitTwo()) {
+            for (int i = getLimitOne() + 1; i < getLimitTwo() - 1; i++) {
+                if (i % 2 == 0) {
+                    System.out.println("EVEN NUMBER!");
+                } else {
+                    System.out.println("ODD NUMBER!");
+                }
+            }
+        }
     }
 }
