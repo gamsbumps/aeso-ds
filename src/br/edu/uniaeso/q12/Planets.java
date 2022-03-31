@@ -1,88 +1,52 @@
 package br.edu.uniaeso.q12;
 
 public class Planets {
-    private double mercury = 0.37;
-    private double venus = 0.88;
-    private double mars = 0.38;
-    private double jupiter = 2.64;
-    private double saturn = 1.15;
-    private double uranus = 1.17;
+    private static final double mercury = 0.37;
+    private static final double venus = 0.88;
+    private static final double mars = 0.38;
+    private static final double jupiter = 2.64;
+    private static final double saturn = 1.15;
+    private static final double uranus = 1.17;
 
-    public double getMercury() {
-        return mercury;
+    private double personsMass;
+    private int planet;
+
+    public double getPersonsMass() {
+        return personsMass;
     }
 
-    public void setMercury(double mercury) {
-        this.mercury = mercury;
+    public void setPersonsMass(double personsMass) {
+        this.personsMass = personsMass;
     }
 
-    public double getVenus() {
-        return venus;
+    public int getPlanet() {
+        return planet;
     }
 
-    public void setVenus(double venus) {
-        this.venus = venus;
+    public void setPlanet(int planet) {
+        this.planet = planet;
     }
 
-    public double getMars() {
-        return mars;
-    }
-
-    public void setMars(double mars) {
-        this.mars = mars;
-    }
-
-    public double getJupiter() {
-        return jupiter;
-    }
-
-    public void setJupiter(double jupiter) {
-        this.jupiter = jupiter;
-    }
-
-    public double getSaturn() {
-        return saturn;
-    }
-
-    public void setSaturn(double saturn) {
-        this.saturn = saturn;
-    }
-
-    public double getUranus() {
-        return uranus;
-    }
-
-    public void setUranus(double uranus) {
-        this.uranus = uranus;
+    public Planets(double personsMass, int planet) {
+        setPersonsMass(personsMass);
+        setPlanet(planet);
     }
 
     public Planets() {
-        setMercury(getMercury());
-        setVenus(getVenus());
-        setMars(getMars());
-        setJupiter(getJupiter());
-        setSaturn(getSaturn());
-        setUranus(getUranus());
     }
-    public double getPlanet(double number){
-        if(number == 1){
-           return getMercury();
+    public double calculateWeight(){
+        if(getPlanet() == 1){
+            return (personsMass * 9.81) / 10 * Planets.mercury;
+        } else if(getPlanet() == 2){
+            return (personsMass * 9.81) / 10 * Planets.venus;
+        }else if(getPlanet() == 3){
+            return (personsMass * 9.81) / 10 * Planets.mars;
+        }else if(getPlanet() == 4){
+            return (personsMass * 9.81) / 10 * Planets.jupiter;
+        }else if(getPlanet() == 5){
+            return (personsMass * 9.81) / 10 * Planets.saturn;
+        }else{
+            return (personsMass * 9.81) / 10 * Planets.uranus;
         }
-        if(number == 2){
-            return getVenus();
-        }
-        if(number == 3){
-            return getMars();
-        }
-        if(number == 4){
-            return getJupiter();
-        }
-        if(number == 5){
-            return getSaturn();
-        }
-        if(number == 6){
-            return getUranus();
-        }
-        return 0;
     }
 }

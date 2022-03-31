@@ -3,25 +3,26 @@ package br.edu.uniaeso.q12;
 import java.util.Scanner;
 
 public class ConsoleGUI {
-    private double txtMass, txtGravity;
+    private double txtWeight;
+    private int txtPlanet;
 
     private Scanner scanner;
-    private Person person;
+    private Planets planets;
 
-    public double getTxtMass() {
-        return txtMass;
+    public double getTxtWeight() {
+        return txtWeight;
     }
 
-    public void setTxtMass(double txtMass) {
-        this.txtMass = txtMass;
+    public void setTxtWeight(double txtWeight) {
+        this.txtWeight = txtWeight;
     }
 
-    public double getTxtGravity() {
-        return txtGravity;
+    public int getTxtPlanet() {
+        return txtPlanet;
     }
 
-    public void setTxtGravity(double txtGravity) {
-        this.txtGravity = txtGravity;
+    public void setTxtPlanet(int txtPlanet) {
+        this.txtPlanet = txtPlanet;
     }
 
     public Scanner getScanner() {
@@ -32,33 +33,33 @@ public class ConsoleGUI {
         this.scanner = scanner;
     }
 
-    public Person getPerson() {
-        return person;
+    public Planets getPlanets() {
+        return planets;
     }
 
-    public void setPerson(Person person) {
-        this.person = person;
+    public void setPlanets(Planets planets) {
+        this.planets = planets;
     }
+
     public ConsoleGUI(){
         setScanner(new Scanner(System.in));
     }
+
     public void gui(){
-        double number;
-        System.out.println("What is your mass? ");
-        setTxtMass(getScanner().nextDouble());
+        System.out.println("How much do you weight? ");
+        setTxtWeight(getScanner().nextDouble());
 
         System.out.println("Which planet you chose?");
         System.out.println("1 - Mercury" +
-                "2 - Venus" +
-                "3 - Mars" +
-                "4 - Jupiter" +
-                "5 - Saturn" +
-                "6 - Uranus");
-        number = scanner.nextDouble();
-       // setPerson(new Person(getTxtMass(), getTxtGravity(),getPerson().getPlanets().getPlanet(number)));
-        getPerson().getPlanets().getPlanet(number);
+                "\n2 - Venus" +
+                "\n3 - Mars" +
+                "\n4 - Jupiter" +
+                "\n5 - Saturn" +
+                "\n6 - Uranus");
+        setTxtWeight(getScanner().nextInt());
+        setPlanets(new Planets(getTxtWeight(), getTxtPlanet()));
+        System.out.println(planets.calculateWeight());
 
-        System.out.println(getPerson().calculateWeight());
 
     }
 }
