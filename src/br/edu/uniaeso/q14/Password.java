@@ -1,5 +1,7 @@
 package br.edu.uniaeso.q14;
 
+import java.util.InputMismatchException;
+
 public class Password {
     private int playerOne, playerTwo;
 
@@ -25,16 +27,5 @@ public class Password {
     public Password(int playerOne, int playerTwo) {
         setPlayerOne(playerOne);
         setPlayerTwo(playerTwo);
-    }
-    public void guesses(Object o){
-
-    }
-    public void guessPassword(){
-        int guess = 0;
-        if(getPlayerOne() < 100 && getPlayerOne() > 0){
-            while(guess <= 5){
-
-            }
-        }
     }
 }
